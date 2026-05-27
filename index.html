@@ -3,58 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeTools - 디자인 툴 가이드</title>
+    <title>DeTools - 디자인 툴 가격 & 설치 가이드</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; }
-        header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
-        .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .tool-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #f9f9f9; }
-        .badge { background: #e1ecf4; color: #39739d; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
-        .btn-install { display: inline-block; background: #007bff; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+        /* 기본 레이아웃 스타일 설정 */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #fcfcfc; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        /* 헤더 스타일 */
+        header { background: #111; color: #fff; padding: 40px 20px; text-align: center; margin-bottom: 30px; border-radius: 0 0 12px 12px; }
+        header h1 { margin: 0; font-size: 2.5em; font-weight: 700; }
+        header p { margin: 10px 0 0; color: #aaa; font-size: 1.1em; }
+        
+        /* 카테고리 네비게이션 */
+        nav { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; padding: 15px; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        nav h3 { margin-top: 0; margin-bottom: 10px; font-size: 1em; color: #666; }
+        nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+        nav a { text-decoration: none; color: #0366d6; background: #f1f8ff; padding: 6px 12px; border-radius: 6px; font-size: 0.9em; font-weight: 500; transition: background 0.2s; }
+        nav a:hover { background: #dbedff; }
+        
+        /* 섹션 및 카드 그리드 구조 */
+        section { margin-bottom: 40px; scroll-margin-top: 20px; }
+        section h2 { border-left: 4px solid #0366d6; padding-left: 10px; margin-bottom: 20px; font-size: 1.6em; }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        
+        /* 개별 프로그램 카드 스펙 */
+        .tool-card { border: 1px solid #e1e4e8; padding: 24px; border-radius: 8px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s, box-shadow 0.2s; }
+        .tool-card:hover { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.05); }
+        .tool-card h3 { margin-top: 0; font-size: 1.3em; display: flex; justify-content: space-between; align-items: center; }
+        .badge { background: #f6f8fa; color: #586069; border: 1px solid #d1d5da; padding: 2px 8px; border-radius: 20px; font-size: 0.75em; font-weight: normal; }
+        .tool-info { margin: 15px 0; font-size: 0.95em; }
+        .tool-info p { margin: 8px 0; }
+        
+        /* 버튼 스타일 */
+        .btn-install { display: block; text-align: center; background: #24292e; color: white; padding: 10px; text-decoration: none; border-radius: 6px; font-weight: 500; margin-top: 15px; transition: background 0.2s; }
+        .btn-install:hover { background: #0366d6; }
+        
+        /* 푸터 */
+        footer { text-align: center; padding: 40px 0; color: #6a737d; font-size: 0.85em; border-top: 1px solid #e1e4e8; margin-top: 60px; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>DeTools (디툴즈)</h1>
-        <p>디자이너를 위한 프로그램별 정품 가격 및 안전한 설치 경로 안내 가이드입니다.</p>
+        <div class="container">
+            <h1>DeTools (디툴즈)</h1>
+            <p>디자인 분야별 프로그램 정품 가격 및 안전한 공식 설치 경로 안내 가이드</p>
+        </div>
     </header>
 
-    <nav>
-        <h3>카테고리</h3>
-        <ul>
-            <li><a href="#3d-motion">3D & 모션 그래픽</a></li>
-            <li><a href="#2d-graphic">2D 그래픽 & 편집</a></li>
-            <li><a href="#video-edit">영상 편집 & 합성</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav>
+            <h3>디자인 분야 선택</h3>
+            <ul>
+                <li><a href="#graphic">2D 그래픽 & 편집</a></li>
+                <li><a href="#uiux">UI/UX & 디지털 제품</a></li>
+                <li><a href="#video">영상 편집 & 합성</a></li>
+                <li><a href="#motion">2D 모션 그래픽</a></li>
+                <li><a href="#graphics-3d">3D 그래픽 & 시각화</a></li>
+                <li><a href="#spatial">공간 & 제품/산업</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <h2>주요 디자인 툴 정보</h2>
-        
-        <div class="tool-grid">
-            
-            <article class="tool-card" id="3d-motion">
-                <h3>Cinema 4D <span class="badge">3D 그래픽</span></h3>
-                <p><strong>가격:</strong> 월 구독 약 10만 원대 (구독 플랜별 상이)</p>
-                <p><strong>설치 방법:</strong> Maxon App 설치 후 프로그램을 다운로드 및 활성화합니다.</p>
-                <a href="https://www.maxon.net" target="_blank" class="btn-install">공식 다운로드 링크 바로가기</a>
-            </article>
+        <main>
+            <section id="graphic">
+                <h2>2D 그래픽 & 편집 디자인</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>Photoshop <span class="badge">Adobe</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 단품 월 30,800원 (구독형)</p>
+                            <p><strong>설치 방법:</strong> Creative Cloud 데스크탑 앱 설치 후 다운로드</p>
+                        </div>
+                        <a href="https://www.adobe.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                    <article class="tool-card">
+                        <h3>Affinity Designer <span class="badge">Serif</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 영구 소장 약 9만 원대 (프로모션 자주 진행)</p>
+                            <p><strong>설치 방법:</strong> 공식 웹사이트 스토어 결제 후 설치 파일 직접 다운로드</p>
+                        </div>
+                        <a href="https://affinity.serif.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
 
-            <article class="tool-card" id="video-edit">
-                <h3>After Effects <span class="badge">모션 그래픽</span></h3>
-                <p><strong>가격:</strong> 단품 월 30,800원 (Creative Cloud 전용 플랜 있음)</p>
-                <p><strong>설치 방법:</strong> Adobe Creative Cloud 데스크탑 앱 설치 후 내부에서 추가 설치합니다.</p>
-                <a href="https://www.adobe.com" target="_blank" class="btn-install">공식 다운로드 링크 바로가기</a>
-            </article>
+            <section id="uiux">
+                <h2>UI/UX & 디지털 제품 디자인</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>Figma <span class="badge">Figma</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 스타터 플랜 무료 / 프로페셔널 유저당 월 $12~15</p>
+                            <p><strong>설치 방법:</strong> 웹 브라우저 작동 및 데스크탑 앱 다운로드 설치 가능</p>
+                        </div>
+                        <a href="https://www.figma.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
 
-        </div>
-    </main>
+            <section id="video">
+                <h2>영상 편집 & 합성</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>DaVinci Resolve <span class="badge">Blackmagic</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 기본 버전 무료 / 스튜디오 버전 영구 소장 약 40만 원대</p>
+                            <p><strong>설치 방법:</strong> 홈페이지 지원 페이지에서 운영체제별 아카이브 설치</p>
+                        </div>
+                        <a href="https://www.blackmagicdesign.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 DeTools Project. Powered by GitHub Pages.</p>
-    </footer>
+            <section id="motion">
+                <h2>2D 모션 그래픽</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>After Effects <span class="badge">Adobe</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 단품 월 30,800원 (구독형)</p>
+                            <p><strong>설치 방법:</strong> Creative Cloud 데스크탑 앱 설치 후 내부에서 활성화</p>
+                        </div>
+                        <a href="https://www.adobe.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="graphics-3d">
+                <h2>3D 그래픽 & 시각화</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>Cinema 4D <span class="badge">Maxon</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 월 구독 약 10만 원대 / 연간 플랜 상이</p>
+                            <p><strong>설치 방법:</strong> Maxon App 매니저 프로그램을 통해 제어 및 설치</p>
+                        </div>
+                        <a href="https://www.maxon.net" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                    <article class="tool-card">
+                        <h3>Blender <span class="badge">Open Source</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 무료 (오픈소스)</p>
+                            <p><strong>설치 방법:</strong> 공식 홈페이지 다운로드 혹은 Steam을 통한 자동 업데이트 설치</p>
+                        </div>
+                        <a href="https://www.blender.org" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="spatial">
+                <h2>공간 & 제품/산업 디자인</h2>
+                <div class="tool-grid">
+                    <article class="tool-card">
+                        <h3>Rhino 3D <span class="badge">McNeel</span></h3>
+                        <div class="tool-info">
+                            <p><strong>가격:</strong> 영구 소장 일반 약 100만 원대 / 학생 할인 가능</p>
+                            <p><strong>설치 방법:</strong> 라이선스 키 구매 후 공식 다운로드 페이지에서 패키지 설치</p>
+                        </div>
+                        <a href="https://www.rhino3d.com" target="_blank" class="btn-install">공식 다운로드 링크</a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 DeTools Project. Powered by GitHub Pages.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
