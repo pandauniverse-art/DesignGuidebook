@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeTools - 디자인 툴 가이드</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; }
+        header { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .tool-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #f9f9f9; }
+        .badge { background: #e1ecf4; color: #39739d; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; }
+        .btn-install { display: inline-block; background: #007bff; color: white; padding: 8px 16px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DeTools (디툴즈)</h1>
+        <p>디자이너를 위한 프로그램별 정품 가격 및 안전한 설치 경로 안내 가이드입니다.</p>
+    </header>
+
+    <nav>
+        <h3>카테고리</h3>
+        <ul>
+            <li><a href="#3d-motion">3D & 모션 그래픽</a></li>
+            <li><a href="#2d-graphic">2D 그래픽 & 편집</a></li>
+            <li><a href="#video-edit">영상 편집 & 합성</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>주요 디자인 툴 정보</h2>
+        
+        <div class="tool-grid">
+            
+            <article class="tool-card" id="3d-motion">
+                <h3>Cinema 4D <span class="badge">3D 그래픽</span></h3>
+                <p><strong>가격:</strong> 월 구독 약 10만 원대 (구독 플랜별 상이)</p>
+                <p><strong>설치 방법:</strong> Maxon App 설치 후 프로그램을 다운로드 및 활성화합니다.</p>
+                <a href="https://www.maxon.net" target="_blank" class="btn-install">공식 다운로드 링크 바로가기</a>
+            </article>
+
+            <article class="tool-card" id="video-edit">
+                <h3>After Effects <span class="badge">모션 그래픽</span></h3>
+                <p><strong>가격:</strong> 단품 월 30,800원 (Creative Cloud 전용 플랜 있음)</p>
+                <p><strong>설치 방법:</strong> Adobe Creative Cloud 데스크탑 앱 설치 후 내부에서 추가 설치합니다.</p>
+                <a href="https://www.adobe.com" target="_blank" class="btn-install">공식 다운로드 링크 바로가기</a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 DeTools Project. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
